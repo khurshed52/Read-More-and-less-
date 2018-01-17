@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Curtail Plugin Demo</title>
+<style>
+body { font-family:'Roboto Condensed'; background-color:#ccc;}
+h1 { margin-top:150px; text-align:center;}
+.demo { margin:30px auto; max-width:400px; padding:2em; box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); background-color:#fafafa;}
+.demo a { padding:10px 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); background-color:#2196F3; border-radius:3px; color:#fff; text-decoration:none;}
+</style>
+</head>
+
+<body>
+<h1>jQuery Curtail Plugin Demo</h1>
+<div class="demo">
+    <p>In sit amet egestas orci. Vestibulum congue volutpat enim ut viverra. Ut id maximus tellus, vel sollicitudin augue. Vivamus efficitur, tellus vitae vehicula ornare, sapien dui dapibus mauris, id egestas nisl lectus rutrum urna. Suspendisse auctor elit id ipsum mattis, non consectetur neque auctor. Proin et erat at metus bibendum hendrerit gravida ut lorem. Morbi eget enim quis ex mattis maximus faucibus nec tortor. Curabitur id justo justo. Pellentesque maximus justo ut dapibus auctor. In velit mauris, finibus in mauris sed, facilisis mollis turpis. Aliquam fringilla et ante et vehicula. Praesent erat sem, efficitur malesuada nibh eu, mollis rhoncus elit. Vestibulum finibus mauris sit amet gravida sollicitudin. Nullam porttitor convallis ornare. Suspendisse pulvinar nulla magna, ac tempor risus lobortis ut.</p>
+    <a href="#">Show More</a>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="jQuery.curtail.js"></script>
+<script>
+    $(function(){
+        $('.demo').curtail({
+            limit: 200,
+            ellipsis: '...',
+            toggle: true,
+            text: ['Read less', 'Read more']
+        });
+    });
+</script>
+</body>
+</html>
